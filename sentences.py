@@ -1,4 +1,4 @@
-# hello, I added another call to the function get_prepositional_phase
+#hello, I added another function called get_adjective which includes an adjective in the sentences.
 import random
 
 def main():
@@ -68,7 +68,7 @@ def get_verb(quantity, tense):
      return verb
   
 def make_sentence(quantity, tense):
-   print(f"{get_determiner(quantity).capitalize()} {get_noun(quantity)} {get_verb(quantity, tense)} {get_prepositional_phrase(quantity)} {get_prepositional_phrase(quantity)}")
+   print(f"{get_determiner(quantity).capitalize()} {get_adjective()} {get_noun(quantity)} {get_verb(quantity, tense)} {get_prepositional_phrase(quantity)} {get_prepositional_phrase(quantity)}")
 
 def get_preposition():
   preposition = ["about", "above", "across", "after", "along",
@@ -84,4 +84,9 @@ def get_preposition():
 def get_prepositional_phrase(quantity):
   return f"{get_preposition()} {get_determiner(quantity)} {get_noun(quantity)}"
 
+def get_adjective():
+   adjective = ["beautiful", "intense", "calm", "brilliant",\
+       "strong", "sweet", "tasty", "fast", "funny", "surprising"]
+   adjective =  random.choice(adjective)
+   return adjective
 main()
