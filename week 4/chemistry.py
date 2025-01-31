@@ -143,8 +143,8 @@ def  make_periodic_table():
     return periodic_table_dict
 
 def main():
-    formula = input("Chemical formula: ")
-    mass_chemical = input("Chemical mass: ")
+    formula = input("Enter the molecular formula of the sample: ")
+    mass_chemical = input("Enter the mass in grams of the sample: ")
     molecules_dict = know_molecules()
     get_formula_name(formula, molecules_dict)
     mass_chemical = float(mass_chemical)
