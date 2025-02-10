@@ -1,0 +1,69 @@
+CSE 111 Proposal for a Student Chosen Program
+
+    (This is a proposal. All proposals are written with our best
+    knowledge at the beginning of a project. As we progress from the
+    beginning to the end of a project, we gain more knowledge, and we
+    change some of our proposed ideas. This is part of completing any
+    project and is fine.  However, we still must write a proposal so
+    that our teachers or supervisors know what we intend to do. Please
+    answer each of the following questions to the best of your
+    knowledge.)
+
+1. What is the title of your program?
+
+IA chat bot assistent
+
+2. What real-world problem will your program address or help to solve?
+
+This chatbot will help users organize their schedules, perform calculations, and retrieve personal information, such as a friend's phone number if they forget it. Additionally, it will provide weather reports and countdowns to important events.
+
+3. What will you learn from developing this program?
+
+I will learn how to create a user-friendly and practical application that efficiently handles multiple tasks. Additionally, I will improve my skills in implementing a simple user interface for better usability.
+
+4. What Python modules will your program use?
+
+csv – To read and store personal information (such as phone numbers) and convert it into a dictionary for easy retrieval.
+math – To perform calculations, including area computation, time conversion, temperature conversion, etc.
+datetime – To calculate the time difference between registered events in days or hours.
+requests – To fetch real-time weather data from an online API.
+pytest – To test mathematical functions and conversion functions to ensure they work correctly.
+
+    (Some examples are: csv, datetime, functools, matplotlib, math,
+    pandas, pytest, random, requests, and tkinter.)
+
+5. List the names of functions you will need?
+
+read_contacts(filename: str) -> dict
+Reads a CSV file containing contact names and phone numbers and returns a dictionary where the names are the keys and the phone numbers are the values.
+
+time_between_events(start_date, end_date)
+Calculates and returns the time difference between two events in days and hours.
+
+convert_temperature(value, unit_from, unit_to)
+Converts a temperature from one unit (Celsius, Fahrenheit, Kelvin) to another.
+
+calculate_area(shape, dimensions)
+Computes the area of a given shape (circle, square, rectangle, etc.) based on its dimensions.
+
+get_weather(city)
+Fetches and returns the current weather information for a specified city using an API.
+
+    (Remember that the most reusable functions don't get user input and
+    don't print results but instead have parameters and return a result.
+    Functions that get user input and print results are important and do
+    useful work but are not easily reusable.)
+
+    (Remember also that it's hard to test functions that get user input
+    and print results. It's easy to test functions that don't get user
+    input and don't print results but instead have parameters and return
+    a result. Therefore, you should write most of your program functions
+    to have parameters and return a result.)
+
+6. List the names of the test functions you will write.
+
+test_time_between_events() – Verifies that the function correctly calculates the number of days and hours between two given dates.
+test_convert_temperature() – Ensures that temperature conversion between different units is accurate.
+test_calculate_area() – Checks that the area computation for different shapes returns the correct values.
+test_read_contacts() – Confirms that contacts are properly loaded into a dictionary from a CSV file.
+test_get_weather() – Mocks an API response to verify that weather data is correctly retrieved and formatted.
